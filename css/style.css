@@ -1,0 +1,446 @@
+:root {
+    --blue: #3693D6;
+    --pastel: #9BC0FF;
+    --beige: #E2E2E2;
+    --grey: #0000004D;
+}
+
+/* lato-regular - latin */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Lato Regular'), local('Lato-Regular'),
+         url('../fonts/lato-v16-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/lato-v16-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+  /* lato-italic - latin */
+  @font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Lato Italic'), local('Lato-Italic'),
+         url('../fonts/lato-v16-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/lato-v16-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+  /* lato-700 - latin */
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('Lato Bold'), local('Lato-Bold'),
+         url('../fonts/lato-v16-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/lato-v16-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+  /* lato-700italic - latin */
+  @font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: local('Lato Bold Italic'), local('Lato-BoldItalic'),
+         url('../fonts/lato-v16-latin-700italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/lato-v16-latin-700italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+  /* lato-900 - latin */
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: local('Lato Black'), local('Lato-Black'),
+         url('../fonts/lato-v16-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/lato-v16-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+  /* lato-900italic - latin */
+  @font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 900;
+    font-display: swap;
+    src: local('Lato Black Italic'), local('Lato-BlackItalic'),
+         url('../fonts/lato-v16-latin-900italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/lato-v16-latin-900italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+  /* calligraffitti-regular - latin */
+@font-face {
+    font-family: 'Calligraffitti';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Calligraffitti Regular'), local('Calligraffitti-Regular'),
+         url('../fonts/calligraffitti-v11-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/calligraffitti-v11-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+
+body {
+    /* Indiquer ici au minimum les règles de typographie de base */
+    background-color: #fff;
+    color: var(--blue);
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+h1,
+h2,
+h3{
+    line-height: 1.3;
+}
+
+h1 {
+    font-family: 'Calligraffitti', sans-serif;
+    text-align: right;
+    color: #fff;
+    text-shadow: 0rem 0rem .5rem var(--grey);
+    font-size: 15.0rem;
+    transform: rotate(-10deg);
+    font-weight: 300;
+}
+
+h1 span {
+    font-size: 12.5rem;
+}
+
+
+h2{
+    font-weight: 700;
+    font-size: 3.6rem;
+}
+
+h3{
+    font-weight: 400;
+    font-size: 2.8rem;
+}
+
+section,
+footer {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+p {
+    grid-area: p;
+}
+
+section{
+    padding: 5rem;
+}
+
+.btn {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 3.0rem;
+    border: 2px solid #fff;
+    border-radius: 4rem;
+    padding: 1rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    column-gap: 1.6rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.site-header{
+    background-image: url(../img/Photo_montagnes.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 107.6vh ;
+    padding: 3.5rem;
+}
+
+.site-header .container {
+    grid-template-areas: 
+        "lh lh lh lh lh lh mn mn mn mn mn mn"
+        ". . . th th th th th th . . ."
+        ". . . . . btnh btnh . . . . .";
+}
+
+
+.logo-header {
+    /* grid-column: 1/7; */
+    grid-area: lh;
+}
+
+.main-nav {
+    /* grid-column: -1 / -7; */
+    grid-area: mn;
+}
+
+.title-header{
+    /* grid-column: 4 / span 5; */
+    grid-area: th;
+    margin-top: 14rem;
+}
+
+
+
+.site-header .btn {
+    /* grid-column: 5/-5; */
+    grid-area: btnh;
+    background-color: var(--blue);
+    margin-top: 10rem;
+    border-color: var(--blue);
+}
+
+.btn svg {
+    fill:none;
+    stroke:#fff;
+    stroke-linecap:round;
+    stroke-width:4;
+}
+
+.btn:hover,
+.btn:focus {
+    color: var(--blue);
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.btn:hover svg,
+.btn:focus svg {
+    stroke: var(--blue);
+}
+
+.main-nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu{
+    display: flex;;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.menu a {
+    display: block;
+    padding: .5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 3.5rem;
+    border-radius: 3rem;
+}
+
+.menu a:hover,
+.menu a:focus {
+    text-decoration: underline;
+}
+
+.menu .hello a{
+    color: var(--blue);
+    background-color: #fff;
+}
+
+
+.present,
+.site-footer {
+    background-color: var(--blue);
+    color: #fff;
+}
+
+.present .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 57rem;
+}
+
+.section-title {
+    grid-area: st;
+    margin-bottom: 2rem;
+}
+
+
+.work .container {
+
+    grid-template-areas: 
+        "wt wt wt wt wt wt wt wt wt wt wt wt"
+        "fjord fjord fjord fjord animal animal animal animal animal animal animal animal"
+        "fjord fjord fjord fjord animal animal animal animal animal animal animal animal"
+        "fly fly fly fly fly fly fly fly rando rando rando rando"
+        "fly fly fly fly fly fly fly fly rando rando rando rando"
+        "fly fly fly fly fly fly fly fly croix croix croix croix"
+        "fly fly fly fly fly fly fly fly croix croix croix croix";
+    gap: 1rem;
+}
+
+.work .section-title {
+    grid-area: wt;
+    margin-bottom: 5rem;
+}
+
+.work .fjord{
+    grid-area: fjord;
+    background-image: url(../img/cold-daylight-fjord-1586298.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.work .animal {
+    grid-area: animal;
+    background-image: url(../img/adorable-animal-breed-434090.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.work .flyhigh {
+    grid-area: fly;
+    background-image: url(../img/action-active-cold-2433353.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.work .rando {
+    grid-area: rando;
+    background-image: url(../img/adventure-adventurer-altitude-2577274.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.work .croix {
+    grid-area: croix;
+    background-image: url(../img/beatiful-landscape-cold-colors-2832052.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.work .work-text {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/Filtre_bleu.svg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.work-text:hover,
+.work-text:focus {
+    background-image: url(../img/Filtre_bleu.svg);
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+}
+
+.work-text h2 {
+    color: #fff;
+    opacity: 1;
+}
+
+.work-text p {
+    color: #fff;
+    opacity: .65;
+}
+
+.work-text .btn {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 2.0rem;
+}
+
+.work-text .btn:hover,
+.work-text .btn:focus{
+    color: rgba(54, 147, 214, .65);
+}
+
+.author .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.member {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 50rem;
+}
+
+.block-buttons{
+    display: flex;
+    justify-content: center;
+}
+
+.author {
+    padding: 5rem;
+}
+
+.btn-cercle {
+    width: 2.6rem;
+    height: 2.6rem;
+    border: 1px solid var(--beige);
+    border-radius: 50%;
+    margin: 1rem;
+    background-color: var(--beige);
+}
+
+.btn-cercle:hover,
+.btn-cercle:focus {
+    border-color: var(--pastel);
+    background-color: var(--pastel);
+}
+
+.site-footer {
+    padding: 5rem;
+}
+
+.site-footer .container{
+    display: inline;
+}
+
+.site-footer .list-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.list-footer > * {
+    flex: 1;
+    text-align: left;
+}
+
+.list-footer h2 {
+    margin-bottom: 2rem;
+}
+
+.reseaux {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.reseaux>* {
+    flex: 1;
+}
+
